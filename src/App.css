@@ -1,0 +1,98 @@
+.main-bg {
+  background-image: url('/src/assets/main-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+}
+
+.login-bg {
+  /* background-image: url('https://thehill.com/wp-content/uploads/sites/2/2021/01/ca_farming_sun_istock.jpg?strip=1&w=640'); */
+  /* background-image: url('https://www.queppelin.com/wp-content/uploads/2019/12/farming-banner-with-logo.jpg'); */
+}
+
+.dashboard-bg {
+  /* background-image: url('https://doa.gov.lk/wp-content/uploads/2020/05/5.6._aaheader.png'); */
+  opacity: 0.3;
+  filter: blur(5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gradient-bg-1 {
+  background: rgb(237,237,237);
+  background: linear-gradient(-47deg, rgba(237,237,237,1) 0%, rgba(237,249,255,1) 19%, rgba(216,216,255,1) 47%, rgba(176,221,255,1) 70%, rgba(234,251,255,1) 100%);
+  box-shadow: -1px 0 15px 5px rgb(228, 246, 255);
+  background-size: 400% 400%;
+  animation: GradientBackground 10s ease infinite;
+}
+
+.gradient-bg-2 {
+  background: rgb(237,237,237);
+background: linear-gradient(35deg, rgba(237,237,237,1) 0%, rgba(232,232,232,1) 19%, rgba(218,226,255,1) 38%, rgba(206,224,196,1) 68%, rgba(234,251,255,1) 100%);
+  box-shadow: -1px 0 15px 5px rgb(228, 246, 255);
+  background-size: 400% 400%;
+  animation: GradientBackground 5s ease infinite;
+}
+
+.pop-down {
+  animation: popDown 0.5s ease;
+}
+
+.pop-right {
+  animation: popRight 0.5s ease;
+}
+
+.pop-up {
+  animation: popUp 0.5s ease;
+}
+
+@keyframes popRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes popDown {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes GradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+};
