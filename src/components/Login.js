@@ -53,7 +53,7 @@ const Login = () => {
     return (
         <div>
         <div className="flex flex-col md:flex-row" style={{height: '100vh'}}>
-            <div className="h-full bg-slate-100 main-bg absolute top-0 left-0 w-full"><h1 className='flex md:justify-left justify-center md:items-center h-full main-text italic text-7xl font-serif text-center md:text-left pt-20 md:pt-0 md:pr-80 leading-relaxed text-white '>Agro SL</h1></div>
+            <div className="h-full bg-slate-100 main-bg absolute top-0 left-0 w-full"><h1 className='flex md:justify-left justify-center md:items-center h-full main-text italic text-7xl font-serif text-center md:text-left pt-20 md:pt-0 md:pr-80 leading-relaxed text-white '></h1></div>
             <div className='absolute w-5/12 h-full top-0 right-0 backdrop-blur-lg hidden md:block' style={{zIndex: 0}}></div>
             <div className='pb-10 w-full h-full relative'>
                 <div className='flex justify-end md:items-center items-end h-full w-full pt-5 z-10'>
