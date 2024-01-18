@@ -9,12 +9,27 @@ const PowerBI = () => {
     }, []);
 
     return (
-        <div className="h-full">
-            <div className="flex flex-col justify-between h-full pt-20 mt-5 px-5">
-                <div className="absolute"><Link to={'/'}><IonIcon icon={arrowBack} size="large" /></Link></div>
-                <div className="grow p-5 pop-up text-6xl text-center">
-                    POWER BI
-                </div>
+        <div className="h-screen w-screen flex flex-col"> {/* Use flexbox for layout */}
+            <div className="p-4 z-10"> {/* Add padding for the header and z-index to ensure it's above the iframe */}
+                <Link to={'/'}>
+                    <IonIcon icon={arrowBack} size="large" />
+                </Link>
+            </div>
+            <div className="flex-grow relative"> {/* Flex-grow allows this div to take up the remaining space */}
+                <iframe 
+                    title="Sample Report Demo"
+                    style={{ 
+                        width: '100%',  // Set iframe width to 100% of its parent
+                        height: '100%', // Set iframe height to 100% of its parent
+                        position: 'absolute', // Position it absolutely within the 'flex-grow' div
+                        top: 0,
+                        left: 0,
+                        border: 'none' // Optional: remove the border
+                    }}
+                    src="https://playground.powerbi.com/sampleReportEmbed"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                ></iframe>
             </div>
         </div>
     );
