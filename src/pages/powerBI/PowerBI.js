@@ -26,7 +26,8 @@ const PowerBI = () => {
                         left: 0,
                         border: 'none' // Optional: remove the border
                     }}
-                    src="https://playground.powerbi.com/sampleReportEmbed"
+                    // src="https://playground.powerbi.com/sampleReportEmbed"
+                    src="https://app.powerbi.com/reportEmbed?reportId=543b6bee-8aca-43f3-a530-eb8af8a9b44c&autoAuth=true&ctid=c3a2e36d-d569-4973-b673-adceb6707fe9"
                     frameBorder="0"
                     allowFullScreen={true}
                 ></iframe>

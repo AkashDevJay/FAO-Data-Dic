@@ -2,6 +2,7 @@ import { IonIcon } from "@ionic/react";
 import { albumsSharp, newspaperSharp } from "ionicons/icons";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { arrowBack } from "ionicons/icons";
 
 const Home = () => {
     useEffect(() => {
@@ -9,24 +10,28 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="h-full relative">
-            <div className="flex flex-col md:flex-row justify-center md:justify-around items-center h-full pop-up">
-                <div className="p-10 text-center">
-                    <Link to={'/form'}>
-                        <div className='bg-slate-100 hover:text-slate-100 text-xl hover:bg-green-600 border-4 hover:border-green-400 font-bold px-20 py-10 mt-10 shadow-2xl drop-shadow-sm transition ease-in-out duration-300 focus:border-green-300 hover:scale-110 rounded-xl cursor-pointer'> 
-                            <IonIcon icon={newspaperSharp} size="large"/>
-                            <div className="pt-2">Form</div> 
-                        </div>
-                    </Link>
-                </div>
-                <div className="p-10 text-center">
-                    <Link to={'/powerBI'}>
-                        <div className='bg-slate-100 hover:text-slate-100 text-xl hover:bg-green-600 border-4 hover:border-green-400 font-bold px-20 py-10 mt-10 shadow-2xl drop-shadow-sm transition ease-in-out duration-300 focus:border-green-300 hover:scale-110 rounded-xl cursor-pointer'> 
-                            <IonIcon icon={albumsSharp} size="large"/>
-                            <div className="pt-2">Power BI</div> 
-                        </div>
-                    </Link>
-                </div>
+        <div className="h-screen w-screen flex flex-col"> {/* Use flexbox for layout */}
+            <div className="p-4 z-10"> {/* Add padding for the header and z-index to ensure it's above the iframe */}
+                <Link to={'/'}>
+                    <IonIcon icon={arrowBack} size="large" />
+                </Link>
+            </div>
+            <div className="flex-grow relative"> {/* Flex-grow allows this div to take up the remaining space */}
+                <iframe 
+                    title="Sample Report Demo"
+                    style={{ 
+                        width: '100%',  // Set iframe width to 100% of its parent
+                        height: '100%', // Set iframe height to 100% of its parent
+                        position: 'absolute', // Position it absolutely within the 'flex-grow' div
+                        top: 0,
+                        left: 0,
+                        border: 'none' // Optional: remove the border
+                    }}
+                    // src="https://playground.powerbi.com/sampleReportEmbed"
+                    src="https://app.powerbi.com/reportEmbed?reportId=543b6bee-8aca-43f3-a530-eb8af8a9b44c&autoAuth=true&ctid=c3a2e36d-d569-4973-b673-adceb6707fe9"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                ></iframe>
             </div>
         </div>
     );
