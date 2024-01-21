@@ -46,7 +46,7 @@ const useAuth = () => {
         // Setting dummy details
         const requestObject = {username, password};
         const processResponse = () => {
-            if (requestObject.username === 'admin' && requestObject.password === 'admin') {
+            if (requestObject.username === 'admin' && requestObject.password === 'FAOData@123') {
                 // setting dummy token
                 // This response should be processed from the backend
                 return {token: username + "_" + password, username: username}
